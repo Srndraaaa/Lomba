@@ -1,0 +1,86 @@
+Petunjuk Teknis BDC Satria Data 2025
+*Waktu penyelesaian soal mulai tanggal 16 Agustus s.d. 13 September 2025
+
+Selamat datang di kompetisi Big Data Challenge (BDC) Satria Data 2025. BDC Satria Data adalah sebuah ajang tahunan yang mengumpulkan talenta-talenta terbaik dalam bidang data science, memberikan kesempatan kepada para peserta untuk menerapkan pengetahuan dan keterampilan mereka dalam menyelesaikan masalah nyata menggunakan big data.
+
+1. Pendahuluan
+Emosi merupakan salah satu aspek fundamental dalam interaksi manusia yang dapat diekspresikan melalui bahasa, intonasi suara, maupun ekspresi wajah. Pada era digital, interaksi tersebut semakin intens terjadi melalui berbagai platform media sosial, seperti Facebook, Instagram, dan TikTok, di mana pengguna secara aktif membagikan konten dalam bentuk teks, audio, dan video.
+
+Analisis otomatis terhadap emosi yang terkandung dalam konten digital memiliki nilai strategis yang signifikan. Analisis tersebut dapat dimanfaatkan untuk memahami kecenderungan sentimen publik, memberikan rekomendasi konten yang relevan, mendukung proses moderasi secara otomatis, serta menjadi sumber data penting dalam penelitian sosial. Salah satu tantangan utama dalam bidang ini adalah mengklasifikasikan emosi secara akurat dari data multimedia yang mengintegrasikan informasi visual, audio, dan teks.
+
+Kompetisi Big Data Challenge (BDC) Satria Data 2025 diselenggarakan dengan tujuan untuk mendorong eksplorasi teknologi multimodal machine learning, mengembangkan kemampuan peserta dalam analisis video berbasis kecerdasan buatan (AI), serta memupuk keterampilan kolaboratif dan eksperimental dalam pengolahan data berskala besar dan kompleks. Melalui kompetisi ini, diharapkan peserta dapat menghasilkan model yang inovatif, efektif, dan aplikatif dalam mendeteksi emosi dari konten digital.
+
+2. Problem
+Dalam rangka mendorong pengembangan teknologi analisis emosi berbasis multimedia, BDC Satria Data 2025 menetapkan permasalahan berupa pembangunan model klasifikasi emosi dengan memanfaatkan data video yang bersumber dari akun publik media sosial.
+
+Setiap video wajib diklasifikasikan ke dalam salah satu dari delapan kategori emosi berikut:
+● Proud (Bangga) – Menunjukkan rasa bangga terhadap sesuatu, biasanya terkait pencapaian atau prestasi.
+● Trust (Percaya) – Mencerminkan rasa percaya diri atau keyakinan terhadap suatu hal.
+● Joy (Bahagia) – Menunjukkan kebahagiaan, kegembiraan, atau kesenangan.
+● Surprise (Terkejut) – Menyampaikan perasaan tidak terduga, kaget, atau takjub.
+● Neutral (Netral) – Bersifat objektif, tanpa emosi yang jelas.
+● Sadness (Sedih) – Menyampaikan rasa kesedihan, kekecewaan, atau kehilangan.
+● Fear (Takut) – Mencerminkan perasaan khawatir, tidak aman, atau cemas.
+● Anger (Marah) – Menunjukkan perasaan frustasi, iritasi, kebencian, atau permusuhan.
+
+Model klasifikasi dibangun menggunakan data train yang telah disediakan, dan hasilnya digunakan untuk melakukan prediksi terhadap data test. Evaluasi kinerja model dilakukan dengan menggunakan Macro-averaged F1-Score yang memberikan bobot penilaian seimbang pada seluruh kelas emosi.
+
+3. Dataset
+Dataset yang digunakan dalam kompetisi ini berupa sekumpulan video berdurasi kurang lebih lima menit yang diperoleh dari media sosial publik, dengan format penyimpanan comma separated values (CSV). Data terdiri dari:
+
+a. Data train: terdiri atas 803 video yang telah dilengkapi dengan label emosi.
+b. Data test: terdiri atas 200 video yang tidak memiliki label emosi dan wajib diprediksi oleh peserta.
+
+Tautan untuk mengunduh dataset adalah sebagai berikut:
+https://bit.ly/dataBDC2025
+
+4. Mekanisme Pengumpulan Hasil
+Peserta diwajibkan memprediksi data test tidak secara manual  dan mengumpulkan hasil prediksi dalam format CSV standar internasional (pemisah koma) dengan menggunakan template submission.csv yang telah disediakan oleh panitia. File tersebut berisi dua kolom: id dan predicted. Kolom predicted diisi dengan hasil prediksi berupa kode numerik sesuai ketentuan berikut:
+0 = Proud
+1 = Trust
+2 = Joy
+3 = Surprise
+4 = Neutral
+5 = Sadness
+6 = Fear
+7 = Anger
+
+Metrik pengukuran yang digunakan oleh Tim Juri BDC pada tahap penyisihan adalah Macro Averaged F1-Score. File submission.csv dapat diunduh pada tautan berikut:
+https://bit.ly/FormatSubmissionBDC2025
+
+Ketentuan file submission:
+a. Nama file menggunakan format submission+NamaTim.csv
+b. Urutan data pada file tidak diperkenankan untuk diubah.
+c. Setiap tim diperbolehkan mengunggah jawaban maksimal tiga kali. Apabila dilakukan lebih dari satu kali, penilaian akan menggunakan nilai tertinggi.
+d. Tidak ada perpanjangan waktu pengumpulan untuk problem pertama.
+
+5. Batasan
+Batasan yang berlaku dalam penyelesaian permasalahan ini adalah sebagai berikut:
+a. Data yang dapat digunakan oleh peserta merupakan data yang dapat diakses secara publik.
+b. Peserta tidak diperkenankan menggunakan software komersial/berbayar.
+c. Peserta tidak diperkenankan untuk menggunakan pre-trained model secara langsung dalam melakukan prediksi.
+d. Peserta dilarang mengubah urutan data pada file submission.csv ketika melakukan pengumpulan jawaban.
+
+6. Aturan Tambahan
+Berikut merupakan aturan tambahan pada BDC Satria Data 2025 yaitu:
+a. Jawaban untuk problem pertama ini diunggah hingga tanggal 13 September 2025 pukul 16:00 WIB.
+b. Berdasarkan metrik pengukuran, Tim Juri BDC akan mengambil tim terpilih dengan metrik pengukuran tertinggi dengan ketentuan maksimal tiga tim dari setiap perguruan tinggi. Apabila terdapat tim dengan nilai metrik yang sama, tim yang mengunggah jawaban lebih dahulu akan mendapat peringkat lebih tinggi.
+c. Tim terpilih akan diminta untuk membuktikan bahwa pekerjaannya tidak dikerjakan secara manual, menggunakan video. Jika tim tidak dapat membuktikan atau tidak mengirimkan bukti tersebut, maka tim dengan nilai terbaik di bawahnya akan naik menjadi tim terpilih.
+d. Jumlah tim terpilih adalah sebanyak 15 tim, yang kemudian dinyatakan lolos ke tahap semifinal.
+e. Selanjutnya, 15 tim yang lolos ke semifinal akan mendapatkan problem kedua untuk diselesaikan.
+f. Problem kedua akan diberikan pada tanggal 27 September 2025.
+g. Kelima belas tim mengerjakan problem kedua dan mengunggah jawaban hingga 14 Oktober 2025 pukul 16:00 WIB.
+h. Berdasarkan pengerjaan problem tersebut, Tim Juri BDC akan menyeleksi 6 tim terbaik sebagai Finalis BDC Satria Data 2025.
+i. Pengumuman finalis adalah tanggal 25 Oktober 2025.
+
+7. Diskualifikasi atau sanksi
+Diskualifikasi atau sanksi akan diberlakukan terhadap peserta lomba yang karyanya:
+a. Karya yang dikumpulkan tidak mematuhi panduan yang telah ditetapkan, termasuk ketidaksesuaian dengan tema atau topik, penggunaan data di luar yang disediakan, atau penyimpangan dari format dan template yang ditentukan.
+b. Karya yang dikumpulkan terbukti mengandung unsur plagiarisme.
+c. Peserta melakukan kecurangan, termasuk tetapi tidak terbatas pada upaya melakukan prediksi secara manual atau menggunakan metode yang dilarang dalam kompetisi.
+d. Pelanggaran etika kompetisi, termasuk namun tidak terbatas pada penggunaan bahasa atau konten yang tidak pantas, atau tindakan yang merugikan peserta lain atau integritas kompetisi.
+
+Sanksi ini diterapkan untuk menjaga integritas dan keadilan kompetisi, memastikan bahwa semua peserta berkompetisi dalam kondisi yang setara dan menghormati aturan yang telah ditetapkan.
+
+Tim Juri BDC Satria Data 2025
+V1.25.8.15
